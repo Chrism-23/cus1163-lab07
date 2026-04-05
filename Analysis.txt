@@ -1,0 +1,14 @@
+1. Compare the results with time quantum 3 and time quantum 5. Which quantum gave better average waiting time? Why?
+	Time quantum 5 gave better average waiting time because it didn't need to switch between processes as much and as such experienced less overhead from context switches.
+
+2. What would happen if the time quantum was 1ms? Would the system be more or less efficient?
+	If the time quantum was 1ms, the system would be less efficient due to increased overhead from context switching.
+
+3. What would happen if the time quantum was 20ms (larger than any process burst time)? How would Round Robin behave then?
+	If the time quantum was 20ms, then every process would complete within 1 time quantum. This causes Round Robin to behave just like FCFS.
+
+4. In the simulation with quantum 3, how many context switches occurred? Count each time a process was removed from the queue.
+	In the simulation with with quantum 3, 6 context switches occur. They happen in 1. P1 (0-3ms), 2. P2 (3-6ms), 3. P3 (6-8ms), 4. P1 (8-11ms), 5. P2 (11-12ms), and 6. P1 (12-13ms)
+
+5. Why does Round Robin prevent the convoy effect that occurs in FCFS scheduling?
+	Round Robin prevents the convoy effect that occurs in FCFS scheduling because each process only has a certain amount of time to execute. If a process is too long, then it will be interrupted and other process are given time to execute. In comparison, in FCFS, if a process takes a long time, then it will execute to completion with other processes forced to wait until completion.
